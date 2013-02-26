@@ -487,7 +487,10 @@
 
 (define-api direct-messages-destroy (id)
   :method post
-  :path   (format nil "/direct_messages/destroy/~D.json" id))
+  :path   "/direct_messages/destroy.json")
+
+(define-api direct-messages-show (id)
+  :path   "/direct_messages/show.json")
 
 (defun api-direct-messages-all-async (&key since_id max_id count page include_entities
 					   onsuccess onfailure)
